@@ -54,3 +54,27 @@ let searchFormElemnt = document.querySelector("#search-form");
 searchFormElemnt.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Durban");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml += `
+
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCTJhojRWW3ZkD2zVn0U0sTypR6g8MuybvABSfu9Fgr1YjIV7qIavZhK-tJA&s"
+              width="25px"
+            />
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temperature-max">18</span>
+              <span class="wwetaher-forcast-temperature-min">12</span>
+            </div>
+          </div>
+    `;
+  });
+  forecastElement.innerHTML = `<div class="forecast-container">${forecastHtml}</div>`;
+}
+displayForecast();
