@@ -67,9 +67,10 @@ axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
+  let forecastHtml = "";
   response.data.daily.forEach(function(day, index){;
   if (index<5)
-  let forecastHtml = "";
+  
   days.forEach(function (day) {
     forecastHtml += `
 
@@ -79,7 +80,7 @@ function displayForecast(response) {
           />
             <div class="weather-forecast-temperatures">
               <span class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}</span>
-              <span class="wwetaher-forcast-temperature-min">${Math.round(day.temperaure.minimim)}</span>
+              <span class="wwetaher-forcast-temperature-min">${Math.round(day.temperature.minimim)}</span>
             </div>
           </div>
     `;
