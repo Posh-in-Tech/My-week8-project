@@ -60,7 +60,6 @@ function formatDay(timestamp){
   let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[date.getDays()];
 
-
 function getForecast(city){
   apiKey="3fbddf9ed4t6a6835a713f4c067a6o68";
   apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
