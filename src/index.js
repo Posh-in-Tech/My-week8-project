@@ -58,17 +58,17 @@ searchCity("Durban");
 function formatDay(timestamp){
   let date= new Date(timestamp *1000)
   let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return days[date.getDays()];
+  return days[date.getDay()];
 
 function getForecast(city){
-  apiKey="3fbddf9ed4t6a6835a713f4c067a6o68";
-  apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+ let apiKey="3fbddf9ed4t6a6835a713f4c067a6o68";
+let apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
 axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
   let forecastHtml = "";
-  response.data.daily.forEach(function(day, index){;
+  response.data.daily.forEach(function(day, index){
   if (index<5){
   
   days.forEach(function (day) {
@@ -80,7 +80,7 @@ function displayForecast(response) {
           />
             <div class="weather-forecast-temperatures">
               <span class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}</span>
-              <span class="wwetaher-forcast-temperature-min">${Math.round(day.temperature.minimim)}</span>
+              <span class="weather-forecast-temperature-min">${Math.round(day.temperature.minimim)}</span>
             </div>
           </div>
     `;
