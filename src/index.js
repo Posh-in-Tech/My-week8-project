@@ -58,7 +58,7 @@ function formatDay(timestamp){
   return days[date.getDay()];
 }
 function getForecast(city){
- let apiKey="3fbddf9ed4t6a6835a713f4c067a6o68";
+let apiKey="3fbddf9ed4t6a6835a713f4c067a6o68";
 let apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
 axios.get(apiUrl).then(displayForecast);
 }
@@ -81,8 +81,9 @@ function displayForecast(response) {
             </div>
           </div>
     `;
-  })
-  };
+  });
+  }
+  }
    let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 })
