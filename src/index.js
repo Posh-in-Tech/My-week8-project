@@ -75,6 +75,6 @@ function displayForecast() {
           </div>
     `;
   });
-  forecastElement.innerHTML = `<div class="forecast-container">${forecastHtml}</div>`;
+  forecastElement.innerHTML = `forecastHTML;
 }
 displayForecast();
