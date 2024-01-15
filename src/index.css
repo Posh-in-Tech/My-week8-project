@@ -96,6 +96,8 @@ a {
 }
 .weather-forecast-temperatures {
   font-size: 13px;
+  display: flex;
+  justify-content: center;
 }
 .weather-forecast-temperature-max{
   font-size:bold;
