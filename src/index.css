@@ -94,6 +94,7 @@ a {
   font-size: 16px;
   opacity: 0, 6;
   color: #000;
+  text-align:center;
 }
 .weather-forecast-temperatures {
   font-size: 13px;
