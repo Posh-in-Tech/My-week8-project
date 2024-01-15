@@ -9,7 +9,7 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
   let windSpeedElement = document.querySelector("#windSpeed");
-  windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
+  windSpeedeElement.innerHTML = `${response.data.wind.speed}km/h`;
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   timeElement.innerHTML = formatDate(date);
