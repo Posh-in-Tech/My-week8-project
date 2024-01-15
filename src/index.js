@@ -84,7 +84,7 @@ function displayForecast(response) {
     `;
   });
   }
-  }
+  })
    let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
