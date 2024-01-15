@@ -75,6 +75,6 @@ function displayForecast() {
           </div>
     `;
   });
-  forecastElement.innerHTML = forecastHTML;
+  forecastElement.innerHTML = forecastHtml;
 }
 displayForecast();
