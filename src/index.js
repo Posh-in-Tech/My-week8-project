@@ -51,10 +51,10 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-
 function formatDay(timestamp){
-  let date= new Date(timestamp *1000);
+  let date= new Date(timestamp * 1000);
   let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
   return days[date.getDay()];
 }
 function getForecast(city){
@@ -65,8 +65,9 @@ axios.get(apiUrl).then(displayForecast);
 
 function displayForecast(response) {
   let forecastHtml = "";
+  
   response.data.daily.forEach(function(day, index){
-  if (index<5){
+  if (index < 5) {
   
   days.forEach(function (day) {
     forecastHtml += `
@@ -81,12 +82,13 @@ function displayForecast(response) {
             </div>
           </div>
     `;
-  });
   }
-  })
+  });
+    
    let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
-})
+}
+    
 let searchFormElemnt = document.querySelector("#search-form");
 searchFormElemnt.addEventListener("submit", handleSearchSubmit);
 
