@@ -81,8 +81,8 @@ function displayForecast(response) {
             </div>
           </div>
     `;
-  }
-  });
+  })
+  };
    let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
