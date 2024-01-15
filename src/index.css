@@ -100,3 +100,9 @@ a {
 .weather-forecast-temperature-min {
   opacity: 0, 5;
 }
+.weather-forecast-icon{
+  width: 88px;
+  length:88px:
+margin:0 auto;
+display:block;
+    
