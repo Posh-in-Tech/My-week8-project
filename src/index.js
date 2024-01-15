@@ -50,10 +50,10 @@ function handleSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
   searchCity(searchInput.value);
 }
-  let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
 function formatDay(timestamp){
   let date= new Date(timestamp * 1000);
-
+  let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   
   return days[date.getDay()];
 }
