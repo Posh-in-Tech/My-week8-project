@@ -55,6 +55,11 @@ let searchFormElemnt = document.querySelector("#search-form");
 searchFormElemnt.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Durban");
+funcion formatDate(){
+  let date= new Date(timestamp *1000)
+  let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDays()];
+  weather-forecast-date=${formatDay(day.time)};
 
 function getForecast(city){
   apiKey="3fbddf9ed4t6a6835a713f4c067a6o68";
@@ -63,23 +68,23 @@ axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  response.data.daily.forEach(function(day index)){;
+  if (index,5)
   let forecastHtml = "";
   days.forEach(function (day) {
     forecastHtml += `
 
           <div class="weather-forecast-day">
             <div class="weather-forecast-date">${day}</div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCTJhojRWW3ZkD2zVn0U0sTypR6g8MuybvABSfu9Fgr1YjIV7qIavZhK-tJA&s"
-              width="25px"
-            />
+            <img src= "${day.condition.icon_url}"  class= "weather-forecast-icon"
+          />
             <div class="weather-forecast-temperatures">
-              <span class="weather-forecast-temperature-max">18</span>
-              <span class="wwetaher-forcast-temperature-min">12</span>
+              <span class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}</span>
+              <span class="wwetaher-forcast-temperature-min">${Math.round(day.temperaure.minimim)}</span>
             </div>
           </div>
     `;
+  }
   });
    let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
