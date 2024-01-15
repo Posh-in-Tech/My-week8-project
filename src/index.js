@@ -51,10 +51,7 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-let searchFormElemnt = document.querySelector("#search-form");
-searchFormElemnt.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Durban");
 function formatDay(timestamp){
   let date= new Date(timestamp *1000)
   let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -89,3 +86,7 @@ function displayForecast(response) {
    let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 })
+let searchFormElemnt = document.querySelector("#search-form");
+searchFormElemnt.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Durban");
