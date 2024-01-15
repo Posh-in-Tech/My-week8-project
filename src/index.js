@@ -55,7 +55,7 @@ let searchFormElemnt = document.querySelector("#search-form");
 searchFormElemnt.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Durban");
-funcion formatDate(){
+function formatDate(timestamp){
   let date= new Date(timestamp *1000)
   let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[date.getDays()];
