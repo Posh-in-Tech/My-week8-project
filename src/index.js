@@ -55,6 +55,12 @@ searchFormElemnt.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Durban");
 
+function getForecast(city){
+  apiKey="3fbddf9ed4t6a6835a713f4c067a6o68";
+  apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+axiois.get(apiUrl).then(displayForecast);
+}
+
 function displayForecast() {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
