@@ -69,7 +69,7 @@ axios.get(apiUrl).then(displayForecast);
 function displayForecast(response) {
   let forecastHtml = "";
   response.data.daily.forEach(function(day, index){;
-  if (index<5)
+  if (index<5){
   
   days.forEach(function (day) {
     forecastHtml += `
