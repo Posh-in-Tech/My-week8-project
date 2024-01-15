@@ -16,6 +16,7 @@ function refreshWeather(response) {
 
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src=${response.data.condition.icon_url} class="weather-app-icon"/>`;
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -61,7 +62,7 @@ function getForecast(city){
 axiois.get(apiUrl).then(displayForecast);
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
   days.forEach(function (day) {
